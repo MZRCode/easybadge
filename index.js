@@ -2,7 +2,7 @@ const { REST, Routes, Client, GatewayIntentBits } = require('discord.js');
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
 const TOKEN = process.env.token;
-const BOT_CLIENT_ID = "";
+const BOT_ID = "";
 
 const commands = [
   {
@@ -17,7 +17,7 @@ const rest = new REST({ version: '10' }).setToken(TOKEN);
   try {
     console.log('/ komutları yeniden yükleniyor!');
 
-    await rest.put(Routes.applicationCommands(BOT_CLIENT_ID), { body: commands });
+    await rest.put(Routes.applicationCommands(BOT_ID), { body: commands });
 
     console.log('/ komutları başarıyla yeniden yüklendi!');
   } catch (error) {
