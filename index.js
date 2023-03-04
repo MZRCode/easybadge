@@ -2,12 +2,12 @@ const { REST, Routes, Client, GatewayIntentBits } = require('discord.js');
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
 const TOKEN = process.env.TOKEN;
-const BOT_ID = "";
+const BOT_ID = "BOTUNUZUN IDSI";
 
 const commands = [
   {
-    name: 'selam',
-    description: 'Size Aleyküm Selam der',
+    name: 'ping',
+    description: 'Size Pingini Gösterir',
   },
 ];
 
@@ -15,11 +15,11 @@ const rest = new REST({ version: '10' }).setToken(TOKEN);
 
 (async () => {
   try {
-    console.log('/ komutları yeniden yükleniyor!');
+    console.log('(/) komutları yükleniyor!');
 
     await rest.put(Routes.applicationCommands(BOT_ID), { body: commands });
 
-    console.log('/ komutları başarıyla yeniden yüklendi!');
+    console.log('(/) komutları başarıyla yüklendi!');
   } catch (error) {
     console.error(error);
   }
@@ -32,8 +32,8 @@ client.on('ready', () => {
 client.on('interactionCreate', async interaction => {
   if (!interaction.isChatInputCommand()) return;
 
-  if (interaction.commandName === 'selam') {
-    await interaction.reply('Aleyküm Selam');
+  if (interaction.commandName === 'ping') {
+    await interaction.reply(`**İşte Pingim:\n${client.ws.ping}ms 🏓**`);
   }
 });
 
