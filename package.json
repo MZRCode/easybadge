@@ -1,0 +1,17 @@
+{
+  "name": "mzr-development",
+  "version": "0.0.1",
+  "description": "MZR Development Botudur",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [
+    "mzr-development"
+  ],
+  "author": "YouTube MZR Development",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.7.1"
+  }
+}
