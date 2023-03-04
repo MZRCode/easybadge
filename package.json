@@ -1,5 +1,5 @@
 {
-  "name": "mzr-development",
+  "name": "MZRDev",
   "version": "0.0.1",
   "description": "MZR Development Botudur",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "test": "node index.js"
   },
   "keywords": [
-    "mzr-development"
+    "MZRDevelopment"
   ],
   "author": "YouTube MZR Development",
   "license": "ISC",
