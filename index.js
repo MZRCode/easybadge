@@ -1,7 +1,7 @@
 const { REST, Routes, Client, GatewayIntentBits } = require('discord.js');
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
-const TOKEN = process.env.TOKEN;
+const TOKEN = "BOTUNUZUN TOKENI";
 const BOT_ID = "BOTUNUZUN IDSI";
 
 const commands = [
